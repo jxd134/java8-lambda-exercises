@@ -2,7 +2,6 @@ package com.insightfullogic.java8.examples.chapter1;
 
 import java.util.List;
 import java.util.Objects;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import static java.util.Collections.unmodifiableList;
