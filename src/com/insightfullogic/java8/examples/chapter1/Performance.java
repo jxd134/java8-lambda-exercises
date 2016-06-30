@@ -11,8 +11,8 @@ public interface Performance {
 	public Stream<Artist> getMusicians();
 
 	public default Stream<Artist> getAllMusicians() {
-		return getMusicians().flatMap(artist->{
-			return concat(Stream.of(artist), artist.getMembers())
+		return getMusicians().flatMap(artist -> {
+			return concat(Stream.of(artist), artist.getMembers());
 		});
 	}
 }
