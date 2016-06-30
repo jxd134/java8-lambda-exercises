@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 import java.util.Objects;
+import java.util.stream.Stream;
+
+import static java.util.stream.Collectors.toList;
 
 public final class Artist {
 
@@ -22,5 +25,35 @@ public final class Artist {
 		this.name = name;
 		this.members = new ArrayList<>(members);
 		this.nationality = nationality;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public Stream<Artist> getMembers() {
+		return members.stream();
+	}
+
+	public String getNationality() {
+		return nationality;
+	}
+
+	public boolean isSolo() {
+		return members.isEmpty();
+	}
+
+	public boolean isFrom(String nationality) {
+		return this.nationality.equals(nationality);
+	}
+
+	@Override
+	public String toString() {
+		return getName();
+	}
+
+	public Artist copy() {
+		List<Artist> members = getMembers().map(Artist::copy).collect(toList());
+		return new Artist(name, members, nationality);
 	}
 }
