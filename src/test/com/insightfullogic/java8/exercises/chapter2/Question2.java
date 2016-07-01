@@ -1,4 +1,4 @@
-package com.insightfullogic.java8.exercises.chapter2;
+package test.com.insightfullogic.java8.exercises.chapter2;
 
 import java.text.DateFormat;
 
