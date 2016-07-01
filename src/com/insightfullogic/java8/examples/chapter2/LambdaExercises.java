@@ -20,8 +20,8 @@ public class LambdaExercises {
 		Function<Double, Double> square = (x) -> x * x;
 		Function<Double, Double> percent = (x) -> 100 * x;
 		assertEquals(negate.apply(1.0), -1.0, 1e-10);
-		assertEquals(square.apply(11.0), -1.0, 1e-10);
-		assertEquals(percent.apply(1.0), -1.0, 1e-10);
+		assertEquals(square.apply(11.0), 121, 1e-10);
+		assertEquals(percent.apply(1.0), 100, 1e-10);
 	}
 
 	@Test
