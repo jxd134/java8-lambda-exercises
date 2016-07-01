@@ -17,7 +17,7 @@ public class Question2Test {
 		calendar.set(Calendar.MONTH, Calendar.JANUARY);
 		calendar.set(Calendar.DAY_OF_MONTH, 1);
 		String threadSafeDateFormat = Question2.threadSafeDateFormat.get().format(calendar.getTime());
-		assertEquals("01-Jan-1970", threadSafeDateFormat);
+		assertEquals("1970-1-1", threadSafeDateFormat);
 	}
 
 }
