@@ -1,13 +1,12 @@
-package test.com.insightfullogic.java8.exercises.chapter2;
+package com.insightfullogic.java8.answers.chapter2;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import java.util.Calendar;
-import java.util.Date;
-
 import com.insightfullogic.java8.exercises.chapter2.Question2;
+
+import java.util.Calendar;
 
 public class Question2Test {
 
@@ -17,8 +16,8 @@ public class Question2Test {
 		calendar.set(Calendar.YEAR, 1970);
 		calendar.set(Calendar.MONTH, Calendar.JANUARY);
 		calendar.set(Calendar.DAY_OF_MONTH, 1);
-		String formatted = Question2.formatter.get().format(new Date(0));
-		assertEquals("70-1-1 ÉÏÎç8:00", formatted);
+		String threadSafeDateFormat = Question2.threadSafeDateFormat.get().format(calendar.getTime());
+		assertEquals("01-Jan-1970", threadSafeDateFormat);
 	}
 
 }

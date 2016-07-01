@@ -4,6 +4,6 @@ import java.text.DateFormat;
 
 public class Question2 {
 
-	public static ThreadLocal<DateFormat> formatter = ThreadLocal.withInitial(() -> DateFormat.getInstance());
+	public static ThreadLocal<DateFormat> threadSafeDateFormat = ThreadLocal.withInitial(() -> DateFormat.getInstance());
 
 }
