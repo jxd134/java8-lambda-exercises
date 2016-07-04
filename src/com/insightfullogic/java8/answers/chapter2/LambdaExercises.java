@@ -7,7 +7,6 @@ import javax.swing.*;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.function.Function;
-import java.util.function.Predicate;
 
 //see : https://github.com/junit-team/junit4/wiki/Assertions
 import static org.junit.Assert.assertEquals;
@@ -46,16 +45,16 @@ public class LambdaExercises {
 		Runnable helloWorld = () -> System.out.println("Hello World!");
 		helloWorld.run();
 	}
-	
+
 	@Test
-	public void chapter2_3b(){
+	public void chapter2_3b() {
 		// pass
-		JButton jButton=new JButton();
-		jButton.addActionListener(event->System.out.println(event.getActionCommand()));
+		JButton jButton = new JButton();
+		jButton.addActionListener(event -> System.out.println(event.getActionCommand()));
 	}
-	
-	@Test 
-	public void chapter2_3c(){
+
+	@Test
+	public void chapter2_3c() {
 		// can't pass
 		// 函数重载,导致无法实现有效判定
 	}
