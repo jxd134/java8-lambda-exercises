@@ -1,4 +1,4 @@
-package com.insightfullogic.java8.answers.chapter2;
+package main.com.insightfullogic.java8.answers.chapter2;
 
 import static org.junit.Assert.assertEquals;
 

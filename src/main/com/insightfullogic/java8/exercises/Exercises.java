@@ -1,4 +1,4 @@
-package com.insightfullogic.java8.exercises;
+package main.com.insightfullogic.java8.exercises;
 
 public class Exercises {
 
