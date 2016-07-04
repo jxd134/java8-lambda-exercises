@@ -42,8 +42,15 @@ public class LambdaExercises {
 
 	@Test
 	public void chapter2_3a() {
-		// Runnable是多线程接口
+		// pass,Runnable是多线程接口
 		Runnable helloWorld = () -> System.out.println("Hello World!");
 		helloWorld.run();
+	}
+	
+	@Test
+	public void chapter2_3b(){
+		// pass
+		JButton jButton=new JButton();
+		jButton.addActionListener(event->System.out.println(event.getActionCommand()));
 	}
 }
