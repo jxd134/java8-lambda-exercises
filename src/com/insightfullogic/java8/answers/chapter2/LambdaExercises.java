@@ -39,4 +39,11 @@ public class LambdaExercises {
 		DateFormat formatter = threadSafeFormatter.get();
 		assertEquals("1970-1-1", formatter.format(new Date(0)));
 	}
+
+	@Test
+	public void chapter2_3a() {
+		// Runnable是多线程接口
+		Runnable helloWorld = () -> System.out.println("Hello World!");
+		helloWorld.run();
+	}
 }
