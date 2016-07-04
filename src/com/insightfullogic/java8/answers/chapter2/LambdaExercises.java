@@ -53,4 +53,10 @@ public class LambdaExercises {
 		JButton jButton=new JButton();
 		jButton.addActionListener(event->System.out.println(event.getActionCommand()));
 	}
+	
+	@Test 
+	public void chapter2_3c(){
+		// can't pass
+		// 函数重载,导致无法实现有效判定
+	}
 }
