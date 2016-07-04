@@ -1,4 +1,4 @@
-package main.com.insightfullogic.java8.examples.chapter1;
+package com.insightfullogic.java8.examples.chapter1;
 
 import java.util.List;
 import java.util.Objects;

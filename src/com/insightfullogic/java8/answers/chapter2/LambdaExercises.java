@@ -1,4 +1,4 @@
-package main.com.insightfullogic.java8.examples.chapter2;
+package com.insightfullogic.java8.answers.chapter2;
 
 import org.junit.Test;
 

@@ -1,10 +1,10 @@
-package main.com.insightfullogic.java8.answers.chapter2;
+package com.insightfullogic.java8.test.chapter2;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import test.com.insightfullogic.java8.exercises.chapter2.Question2;
+import com.insightfullogic.java8.examples.chapter2.Question2;
 
 import java.util.Calendar;
 
