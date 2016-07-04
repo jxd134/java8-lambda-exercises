@@ -1,4 +1,4 @@
-package com.insightfullogic.java8.answers.chapter1;
+package com.insightfullogic.java8.answers.chapter3;
 
 import java.util.List;
 import java.util.stream.Stream;
