@@ -29,7 +29,14 @@ public class LambdaExercises {
 		Function<Integer, Integer> one = x -> x + 1;
 		// 2 isn't
 		Function<Integer, Boolean> three = x -> x == 1;
-		assertEquals(one.apply(1), Integer.valueOf(1)); //注意类型匹配,否则导致assertEquals二义性
+		assertEquals(one.apply(1), Integer.valueOf(2)); // 注意类型匹配,否则导致assertEquals二义性
 		assertEquals(three.apply(1), true);
+	}
+
+	@Test
+	public void chapter2_2b() {
+		ThreadLocal<DateFormat> threadSafeFormatter = ThreadLocal.withInitial(() -> DateFormat.getDateInstance());
+		DateFormat formatter = threadSafeFormatter.get();
+		assertEquals("1970-1-1", formatter.format(new Date(0)));
 	}
 }
