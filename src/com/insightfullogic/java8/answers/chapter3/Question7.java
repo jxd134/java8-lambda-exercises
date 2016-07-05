@@ -14,6 +14,7 @@ public class Question7 {
 	}
 
 	// 找出字符串列表中,包含最多小写字母的字符串
+	// 关于Optional的相关资料,详见http://www.importnew.com/6675.html
 	public static Optional<String> mostLowercaseString(List<String> strings) {
 		return strings.stream()
 				.max(Comparator.comparing(Question7::countLowercaseLetters));
