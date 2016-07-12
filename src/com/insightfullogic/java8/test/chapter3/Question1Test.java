@@ -11,8 +11,14 @@ public class Question1Test {
 
 	@Test
 	public void testAddUpWithEmptyList() {
-		int result=Question1.addUp(Stream.empty());
+		int result = Question1.addUp(Stream.empty());
 		assertEquals(0, result);
+	}
+
+	@Test
+	public void testAddUpWithValues() {
+		int result = Question1.addUp(Stream.of(1, 3, -2));
+		assertEquals(2, result);
 	}
 
 }
