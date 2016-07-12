@@ -33,7 +33,7 @@ public class FilterUsingReduceTest {
 		assertEquals(exceptedOutput, output);
 
 		List<I> parallelOutput = FilterUsingReduce.filter(input.parallelStream(), predicate);
-		assertEquals(exceptedOutput, output);
+		assertEquals(exceptedOutput, parallelOutput);
 	}
 
 }
