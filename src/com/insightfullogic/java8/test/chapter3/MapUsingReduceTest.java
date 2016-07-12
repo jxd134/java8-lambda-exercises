@@ -28,6 +28,13 @@ public class MapUsingReduceTest {
 		assertMapped((Integer x) -> x + 2, asList(1, 2, 3), asList(3, 4, 5));
 	}
 
+	@Test
+	public void convertIntegerToBooleanTest() {
+		assertMapped((Integer x) -> {
+			return x >= 0 ? true : false;
+		}, asList(1, -2, 3, 0, -11), asList(true, false, true, true, false));
+	}
+
 	private <I, O> void assertMapped(Function<I, O> mapper, List<I> input, List<O> expectedOutput) {
 		List<O> output = MapUsingReduce.map(input.stream(), mapper);
 		assertEquals(expectedOutput, output);
