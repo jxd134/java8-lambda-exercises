@@ -20,7 +20,7 @@ public class Question7Test {
 	@Test
 	public void findsMostLowercaseString() {
 		Optional<String> result = Question7.mostLowercaseString(Arrays.asList("a", "abc", "ABCde"));
-		assertEquals(result, Optional.of("abc")); // 注意optional的用法
+		assertEquals(result, Optional.of("abc")); // 注意optional的用法,后续补充
 	}
 
 }
