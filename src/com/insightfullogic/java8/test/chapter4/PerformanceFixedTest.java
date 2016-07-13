@@ -2,6 +2,11 @@ package com.insightfullogic.java8.test.chapter4;
 
 import static org.junit.Assert.*;
 import static org.hamcrest.MatcherAssert.assertThat;
+
+// http://www.vogella.com/tutorials/Hamcrest/article.html
+// 上面网址提供Hamcrest解决与Junit冲突的办法
+// http://search.maven.org/#search|ga|1|g%3Aorg.hamcrest
+// 上面网址提供hamcrest的相关文件下载路径
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.hasItems;
 
