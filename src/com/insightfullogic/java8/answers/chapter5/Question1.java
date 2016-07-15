@@ -14,4 +14,8 @@ public class Question1 {
 	public int question1_b(List<Integer> integers) {
 		return integers.stream().reduce(0, Integer::sum);
 	}
+
+	public List<Integer> question1_c(List<Integer> data1, List<Integer> data2) {
+		return Stream.of(data1, data2).flatMap(List<Integer>::stream).collect(toList());
+	}
 }
