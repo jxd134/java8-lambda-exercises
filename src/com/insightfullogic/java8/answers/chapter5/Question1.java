@@ -7,15 +7,15 @@ import static java.util.stream.Collectors.toList;
 
 public class Question1 {
 
-	public List<String> question1_a(List<String> strings) {
+	public static List<String> question1_a(List<String> strings) {
 		return strings.stream().map(String::toUpperCase).collect(toList());
 	}
 
-	public int question1_b(List<Integer> integers) {
+	public static int question1_b(List<Integer> integers) {
 		return integers.stream().reduce(0, Integer::sum);
 	}
 
-	public List<Integer> question1_c(List<Integer> data1, List<Integer> data2) {
+	public static List<Integer> question1_c(List<Integer> data1, List<Integer> data2) {
 		return Stream.of(data1, data2).flatMap(List<Integer>::stream).collect(toList());
 	}
 }
