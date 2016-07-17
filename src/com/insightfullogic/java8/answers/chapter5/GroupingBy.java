@@ -54,14 +54,12 @@ public class GroupingBy<T, K> implements Collector<T, Map<K, List<T>>, Map<K, Li
 
 	@Override
 	public Function<Map<K, List<T>>, Map<K, List<T>>> finisher() {
-		// TODO Auto-generated method stub
-		return null;
+		return map->map;
 	}
 
 	@Override
 	public Set<java.util.stream.Collector.Characteristics> characteristics() {
-		// TODO Auto-generated method stub
-		return null;
+		return characteristics;
 	}
 
 }
