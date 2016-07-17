@@ -12,6 +12,7 @@ import java.util.function.Function;
 import java.util.function.Supplier;
 import java.util.stream.Collector;
 
+//现阶段无法理解,待后续解决
 public class GroupingBy<T, K> implements Collector<T, Map<K, List<T>>, Map<K, List<T>>> {
 
 	private final static Set<Characteristics> characteristics = new HashSet<>();
@@ -41,9 +42,9 @@ public class GroupingBy<T, K> implements Collector<T, Map<K, List<T>>, Map<K, Li
 
 	@Override
 	public BinaryOperator<Map<K, List<T>>> combiner() {
-		return (left,right)->{
-			right.forEach((key,value)->{
-				left.merge(key, value, (leftValue,rightValue)->{
+		return (left, right) -> {
+			right.forEach((key, value) -> {
+				left.merge(key, value, (leftValue, rightValue) -> {
 					leftValue.addAll(rightValue);
 					return leftValue;
 				});
@@ -54,7 +55,7 @@ public class GroupingBy<T, K> implements Collector<T, Map<K, List<T>>, Map<K, Li
 
 	@Override
 	public Function<Map<K, List<T>>, Map<K, List<T>>> finisher() {
-		return map->map;
+		return map -> map;
 	}
 
 	@Override
