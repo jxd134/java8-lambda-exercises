@@ -15,4 +15,14 @@ public class SerialToParallelTest {
 		assertEquals(328350, SerialToParallel.sequentialSumOfSquares(IntStream.range(0, 100)));
 		assertEquals(328350, SerialToParallel.sumOfSquares(IntStream.range(0, 100)));
 	}
+
+	@Test
+	public void test1() {
+		assertEquals(2646700, SerialToParallel.sequentialSumOfSquares(IntStream.range(0, 200)));
+	}
+
+	@Test
+	public void test2() {
+		assertEquals(2646700, SerialToParallel.sumOfSquares(IntStream.range(0, 200)));
+	}
 }
