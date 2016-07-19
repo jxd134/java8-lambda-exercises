@@ -21,6 +21,7 @@ public class SerialToParallelTest {
 		assertEquals(2646700, SerialToParallel.sequentialSumOfSquares(IntStream.range(0, 200)));
 	}
 
+	// 并行化处理数据累加,能够较为有效的缩短运算时间
 	@Test
 	public void test2() {
 		assertEquals(2646700, SerialToParallel.sumOfSquares(IntStream.range(0, 200)));
