@@ -6,17 +6,18 @@ import java.util.stream.IntStream;
 
 public class OptimisationExample {
 
-	//后续使用JMH进行基准测试
+	// 后续使用JMH进行基准测试
 	public static void main(String[] ignore) {
 
+		int testNum = 1000;
 		long startTime;
 		double testTime = 0.0;
 		OptimisationExample optimisationExample = new OptimisationExample();
 
-		for (int i = 0; i < 1000; i++) {
+		for (int i = 0; i < testNum; i++) {
 			startTime = System.currentTimeMillis();
 			optimisationExample.slowSumOfSquares();
-			testTime = (double) (System.currentTimeMillis() - startTime) / 1000.0;
+			testTime = (double) (System.currentTimeMillis() - startTime) / testNum;
 		}
 		System.out.println("测试时间: " + testTime + "(ms)");
 	}
