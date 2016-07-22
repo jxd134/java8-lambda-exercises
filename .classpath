@@ -4,9 +4,5 @@
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry exported="true" kind="lib" path="D:/GithubRepository/java8-lambda-exercises/lib/hamcrest-all-1.3.jar"/>
 	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
-	<classpathentry exported="true" kind="lib" path="D:/GithubRepository/java8-lambda-exercises/lib/jmh-generator-annprocess-1.12.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/GithubRepository/java8-lambda-exercises/lib/commons-math3-3.2.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/GithubRepository/java8-lambda-exercises/lib/jmh-core-1.12.jar"/>
-	<classpathentry exported="true" kind="lib" path="D:/GithubRepository/java8-lambda-exercises/lib/jopt-simple-4.6.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

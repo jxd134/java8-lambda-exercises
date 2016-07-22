@@ -1,51 +1,45 @@
 package com.insightfullogic.java8.answers.chapter6;
 
-import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.stream.IntStream;
 
-//import org.openjdk.jmh.Main;
-import org.openjdk.jmh.annotations.*;
-import org.openjdk.jmh.runner.Runner;
-import org.openjdk.jmh.runner.RunnerException;
-import org.openjdk.jmh.runner.options.Options;
-import org.openjdk.jmh.runner.options.OptionsBuilder;
-
-
-@State(Scope.Thread)
-@BenchmarkMode(Mode.AverageTime)
 public class OptimisationExample {
 
-	public static void main(String[] ignore) throws IOException, RunnerException {
-		// final String[] args = { ".*OptimisationExample.*", "-wi", "10", "-i",
-		// "10", "-f", "1" };
-		// Main.main(args);
+	//后续使用JMH进行基准测试
+	public static void main(String[] ignore) {
 
-		Options opt = new OptionsBuilder().include(OptimisationExample.class.getSimpleName()).warmupIterations(5)
-				.measurementIterations(5).build();
+		long startTime;
+		double testTime = 0.0;
+		OptimisationExample optimisationExample = new OptimisationExample();
 
-		new Runner(opt).run();
+		for (int i = 0; i < 1000; i++) {
+			startTime = System.currentTimeMillis();
+			optimisationExample.slowSumOfSquares();
+			testTime = (double) (System.currentTimeMillis() - startTime) / 1000.0;
+		}
+		System.out.println("测试时间: " + testTime + "(ms)");
 	}
 
-	private List<Integer> LinkedListOfNumbers;
+	private List<Integer> linkedListOfNumbers;
 
-	@Setup
+	public OptimisationExample() {
+		init();
+	}
+
 	public void init() {
-		LinkedListOfNumbers = new LinkedList<Integer>();
-		addNumbers(LinkedListOfNumbers);
+		linkedListOfNumbers = new LinkedList<>();
+		addNumbers(linkedListOfNumbers);
 	}
 
 	private void addNumbers(List<Integer> container) {
 		IntStream.range(0, 1_000_000).forEach(container::add);
 	}
 
-	@Benchmark
 	public int slowSumOfSquares() {
-		return LinkedListOfNumbers.parallelStream().map(x -> x * x).reduce(0, (acc, element) -> acc + element);
+		return linkedListOfNumbers.parallelStream().map(x -> x * x).reduce(0, (acc, x) -> acc + x);
 	}
 
-	@Benchmark
 	public int fastSumOfSquares() {
 		return 0;
 	}
