@@ -17,4 +17,19 @@ public class CountLength {
 		return count;
 	}
 
+	public long countMusicians(List<Album> albums) {
+		long count = 0;
+		for (Album album : albums) {
+			count += album.getMusiciansList().size();
+		}
+		return count;
+	}
+
+	public long countTracks(List<Album> albums) {
+		long count = 0;
+		for (Album album : albums) {
+			count += album.getTrackList().size();
+		}
+		return count;
+	}
 }
