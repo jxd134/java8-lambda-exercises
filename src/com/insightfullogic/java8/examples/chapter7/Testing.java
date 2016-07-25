@@ -1,9 +1,16 @@
 package com.insightfullogic.java8.examples.chapter7;
 
 import java.util.List;
+import java.util.Set;
 import java.util.logging.Logger;
 
+import com.insightfullogic.java8.examples.chapter1.Album;
+import com.insightfullogic.java8.examples.chapter1.Artist;
+
+import static java.util.stream.Collectors.toSet;
 import static java.util.stream.Collectors.toList;
+
+import java.util.HashSet;
 
 public class Testing {
 
@@ -29,4 +36,30 @@ public class Testing {
 	public static List<String> elementFirstToUpperCase(List<String> strings) {
 		return strings.stream().map(Testing::firstTpUpperCase).collect(toList());
 	}
+
+	// 日志和打印消息
+	public static Set<String> imperativeNationalityReport(Album album) {
+		Set<String> nationalities = new HashSet<>();
+		for (Artist artist : album.getMusiciansList()) {
+			if (artist.getName().startsWith("The")) {
+				String nationality = artist.getNationality();
+				System.out.println("Found nationality: " + nationality);
+				nationalities.add(nationality);
+			}
+		}
+		return nationalities;
+	}
+
+	public static Set<String> forEachLoggingFailure(Album album) {
+		album.getMusicians()
+				.filter(artist -> artist.getName().startsWith("The"))
+				.map(artist -> artist.getNationality())
+				.forEach(nationality -> System.out.println("Found: " + nationality));
+
+		Set<String> nationalities = album.getMusicians()
+				.filter(artist -> artist.getName().startsWith("The"))
+				.map(artist -> artist.getNationality()).collect(toSet());
+		return nationalities;
+	}
+
 }
